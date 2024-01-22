@@ -1,7 +1,7 @@
 .task-item-container {
   display: flex;
   justify-content: space-between;
-  max-width: 30%;
+  max-width: 90%;
 
   @media (max-width: 768px) {
     max-width: 90%;

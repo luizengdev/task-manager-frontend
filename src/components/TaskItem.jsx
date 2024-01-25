@@ -4,12 +4,16 @@ import { useAlert } from "react-alert";
 
 import "./TaskItem.scss";
 
-const TaskItem = ({ task }) => {
+const TaskItem = ({ task, fetchTasks }) => {
   const alert = useAlert();
 
   const handleTaskDeletion = async () => {
     try {
       await axios.delete(`http://localhost:3000/tasks/${task._id}`);
+
+      await fetchTasks();
+
+      alert.success("Tarefa deletada com sucesso!");
     } catch (error) {
       alert.error("Algo deu errado!");
     }

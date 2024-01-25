@@ -40,7 +40,7 @@ const TaskItem = ({ task, fetchTasks }) => {
           <label
             className={
               task.isCompleted
-                ? "checkbox-container completed"
+                ? "checkbox-container-completed"
                 : " checkbox-container"
             }
           >

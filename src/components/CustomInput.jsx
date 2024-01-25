@@ -1,6 +1,6 @@
 import "./CustomInput.scss";
 
-const CustomInput = ({ label, value, onChange }) => {
+const CustomInput = ({ label, value, onChange, onEnterPress }) => {
   return (
     <div className="custom-input-container">
       <input
@@ -8,6 +8,7 @@ const CustomInput = ({ label, value, onChange }) => {
         className="custom-input"
         value={value}
         onChange={(e) => onChange(e)}
+        onKeyDown={(e) => e.key === "Enter" && onEnterPress()}
       />
 
       {label ? (

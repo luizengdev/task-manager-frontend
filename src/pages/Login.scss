@@ -1,0 +1,28 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 28px;
+    font-size: 2rem;
+    color: aqua;
+  }
+
+  .logo {
+    width: 300px;
+    height: 150px;
+    padding: 0, 0, 0, 0;
+  }
+
+  .button-container {
+    font-size: 28px;
+    width: 405.76px;
+    color: black;
+  }
+}

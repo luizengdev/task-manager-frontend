@@ -25,7 +25,7 @@ const AddTask = ({ fetchTasks }) => {
         );
       }
 
-      await axios.post("http://localhost:3000/tasks", {
+      await axios.post(`${import.meta.env.VITE_API_URL}/tasks`, {
         description: task,
         isCompleted: false,
       });

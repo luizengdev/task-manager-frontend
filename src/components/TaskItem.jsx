@@ -9,7 +9,7 @@ const TaskItem = ({ task, fetchTasks }) => {
 
   const handleTaskDeletion = async () => {
     try {
-      await axios.delete(`http://localhost:3000/tasks/${task._id}`);
+      await axios.delete(`${import.meta.env.VITE_API_URL}/tasks/${task._id}`);
 
       await fetchTasks();
 
@@ -21,7 +21,7 @@ const TaskItem = ({ task, fetchTasks }) => {
 
   const handleTaskCompletionChange = async (e) => {
     try {
-      await axios.patch(`http://localhost:3000/tasks/${task._id}`, {
+      await axios.patch(`${import.meta.env.VITE_API_URL}/tasks/${task._id}`, {
         isCompleted: e.target.checked,
       });
 

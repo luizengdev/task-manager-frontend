@@ -14,7 +14,7 @@ const Tasks = () => {
 
   const fetchTasks = useCallback(async () => {
     try {
-      const { data } = await axios.get("http://localhost:3000/tasks");
+      const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/tasks`);
 
       setTasks(data);
     } catch (_error) {
